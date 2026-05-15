@@ -1,5 +1,5 @@
 import Testing
-@testable import MisakiSwift
+@testable import MisakiMitwa
 
 let texts: [(originalText: String, britishPhonetization: String, americanPhoneitization: String)] = [
   ("[Misaki](/misˈɑki/) is a G2P engine designed for [Kokoro](/kˈOkəɹO/) models.",

@@ -1,6 +1,6 @@
 import Foundation
 import NaturalLanguage
-import MLXUtilsLibrary
+import MLXUtilsMitwa
 
 // Main G2P pipeline for English text
 final public class EnglishG2P {

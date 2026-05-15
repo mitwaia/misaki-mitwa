@@ -4,36 +4,36 @@
 import PackageDescription
 
 let package = Package(
-  name: "MisakiSwift",
+  name: "misaki-mitwa",
   platforms: [
     .iOS(.v18), .macOS(.v15)
   ],
   products: [
     .library(
-      name: "MisakiSwift",
+      name: "MisakiMitwa",
       type: .dynamic,
-      targets: ["MisakiSwift"]
+      targets: ["MisakiMitwa"]
     ),
   ],
   dependencies: [
     .package(url: "https://github.com/ml-explore/mlx-swift", exact: "0.31.3"),
-    .package(url: "https://github.com/mlalma/MLXUtilsLibrary.git", exact: "0.0.6")
+    .package(url: "https://github.com/mitwaia/Utils-Mitwa", exact: "0.0.6")
   ],
   targets: [
     .target(
-      name: "MisakiSwift",
+      name: "MisakiMitwa",
       dependencies: [
         .product(name: "MLX", package: "mlx-swift"),
         .product(name: "MLXNN", package: "mlx-swift"),
-        .product(name: "MLXUtilsLibrary", package: "MLXUtilsLibrary")
+        .product(name: "MLXUtilsMitwa", package: "Utils-Mitwa")
      ],
      resources: [
       .copy("../../Resources/")
      ]
     ),
     .testTarget(
-      name: "MisakiSwiftTests",
-      dependencies: ["MisakiSwift"]
+      name: "MisakiMitwaTests",
+      dependencies: ["MisakiMitwa"]
     ),
   ]
 )
